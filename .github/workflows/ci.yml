@@ -18,6 +18,5 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
-          command: npm run test
-          record: true
+          command: npm run test:cloud
           parallel: true # Runs test in parallel using settings above 
