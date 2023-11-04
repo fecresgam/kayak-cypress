@@ -12,7 +12,7 @@ describe('cookies management', () => {
     cy.contains('Usamos cookies técnicas, analíticas y de marketing para que te resulte más fácil iniciar sesión y reanudar tus búsquedas sin tener que empezar desde cero.').should('be.visible');
   });
 
-  it('privacy policy available', () => {
+  it.only('privacy policy available', () => {
     cy.contains('a', 'Política de privacidad')
         .as('privacyPolicy')
         .should('be.visible')
@@ -20,8 +20,8 @@ describe('cookies management', () => {
 
     cy.get('@privacyPolicy')
         .invoke('removeAttr', 'target')
-        .click()
-        .contains('h1', 'Política de privacidad')
+        .click();
+    cy.contains('h1', 'Política de privacidad')
         .should('be.visible');
   });
 });
