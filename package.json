@@ -7,11 +7,15 @@
     "test": "cypress run",
     "test:cloud": "cypress run --record"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/fecresgam/cypress-example.git"
   },
   "dependencies": {
     "cypress": "^13.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
