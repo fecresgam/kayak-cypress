@@ -1,0 +1,16 @@
+{
+  "name": "kayak-cypress",
+  "version": "1.0.0",
+  "description": "Kayak.es Test Automation with Cypress",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run"
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fecresgam/cypress-example.git"
+  },
+  "dependencies": {
+    "cypress": "^13.4.0"
+  }
+}
