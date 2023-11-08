@@ -1,5 +1,9 @@
 /// <reference types="cypress" />
 
+import { CommonPage } from "../../support/pages/common.page";
+
+const commonPage = new CommonPage();
+
 describe("cookies management", () => {
   beforeEach(() => {
     cy.visit("https://www.kayak.es/");
@@ -12,7 +16,7 @@ describe("cookies management", () => {
     ).should("be.visible");
   });
 
-  it.only("privacy policy available", () => {
+  it("privacy policy available", () => {
     cy.contains("a", "Política de privacidad", { timeout: 8000 })
       .as("privacyPolicy")
       .should("be.visible")
@@ -20,5 +24,10 @@ describe("cookies management", () => {
 
     cy.get("@privacyPolicy").invoke("removeAttr", "target").click();
     cy.contains("h1", "Política de privacidad").should("be.visible");
+  });
+
+  it.only("accept cookies", () => {
+    cy.contains("div", "Nos importa tu privacidad").should("be.visible");
+    cy.get(commonPage.button.accept).should("be.visible").click();
   });
 });
