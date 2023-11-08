@@ -1,4 +1,4 @@
-import { CommonPage } from "../../support/pages/common.page";
+import { CommonPage } from "../pages/common.page";
 
 const COMMON_PAGE = new CommonPage();
 
