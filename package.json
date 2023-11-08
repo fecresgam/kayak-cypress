@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "eslint": "^8.53.0",
-    "eslint-config-google": "^0.14.0"
+    "eslint-config-google": "^0.14.0",
+    "typescript": "^5.2.2"
   }
 }
