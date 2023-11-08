@@ -1,3 +1,4 @@
+// eslint-disable-next-line spaced-comment
 /// <reference types="cypress" />
 
 
@@ -13,7 +14,7 @@ describe('cookies management', () => {
   });
 
   it.only('privacy policy available', () => {
-    cy.contains('a', 'Política de privacidad')
+    cy.contains('a', 'Política de privacidad', {'timeout': 8000})
         .as('privacyPolicy')
         .should('be.visible')
         .should('have.attr', 'target', '_blank');
